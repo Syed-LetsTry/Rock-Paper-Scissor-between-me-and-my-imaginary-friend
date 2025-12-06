@@ -1,0 +1,61 @@
+import random
+print( " """"  Game between Syed and Shifana 😄😇 """ "")
+print ("        First to three wins 😄 ")
+syed_score = 0
+shifana_score = 0
+round= 0
+while syed_score < 3 and shifana_score < 3:
+  round = round + 1
+  print("   Welcome to the round ", round)
+  # My Choice
+  syed = int(input("1) '✊'\n2) '✋'\n3) '✌️': "))
+  print("Syed's choice: ", syed)
+ 
+ #Syed choice 
+  if syed ==1:
+    print(' Syed Choice: ✊')
+  elif syed ==2:
+    print(' Syed Choice: ✋')
+  else :
+    print(' Syed Choice : ✌️')
+  
+
+  #conditions of my choice:
+  if syed != 1 and syed != 2 and syed != 3:
+    print("Invalid Choice, Choose between 1-3")
+    continue
+
+  #shifana choice
+  shifana = random.randint(1,3)
+  if shifana == 1:
+    print('Shifana Choice: ✊')
+  elif shifana == 2:
+    print('Shifana Choice: ✋')
+  else :
+    print(' Shifana Choice : ✌️')
+
+  if syed == shifana:
+    print("It's a tie")
+  elif syed == "1" and shifana == "3":
+    print("Syed wins")
+    syed_score = syed_score + 1
+  elif syed == "2" and shifana == "1":
+    print("Syed wins")
+    syed_score = syed_score + 1
+  elif syed == "3" and shifana == "2":
+    print("Syed wins")
+    syed_score = syed_score + 1
+  else:
+    print("Shifana wins")
+    shifana_score = shifana_score + 1
+  print("Syed's Score: ", syed_score)
+  print("Shifana's Score: ", shifana_score)
+
+print(" Game is Over: ")
+
+if syed_score > shifana_score:
+  print("Syed wins the game")
+else:
+  print(" Shifana wins the game")
+
+print(" Thanks, Well Played ")
